@@ -15,3 +15,24 @@ Incluye secciones de filtro, tarjetas, tabla comparativa, glosario y un quiz.
    - No necesitas configurar nada extra.
 5. Haz clic en **Deploy**.
 6. Tras unos segundos tendrás una URL pública con tu sitio, por ejemplo:  
+
+
+---
+
+## 📂 Estructura del proyecto
+
+
+---
+
+## 📖 Cómo editar el contenido
+
+- Entra al repositorio en GitHub.  
+- Usa el botón **Add file → Edit file** para modificar `index.html` directamente en el navegador.  
+- Confirma los cambios con un **commit**.  
+- Vercel actualizará el sitio automáticamente tras cada cambio.
+
+---
+
+## 👩‍💻 Créditos
+
+Creado como recurso educativo para aprender sobre **tipos de almacenamiento de datos**.
