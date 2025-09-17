@@ -74,116 +74,16 @@
     // Datos de ejemplo
     // ======================
     const items = [
-      {
-        tipo: "RAM",
-        uso: "Memoria primaria, ejecución temporal de procesos",
-        ejemplos: "DDR4, DDR5",
-        latencia: "Nanosegundos",
-        rendimiento: "Muy alto",
-        durabilidad: "Volátil (se pierde al apagar)",
-        escalabilidad: "Limitada al hardware del servidor",
-        coste: "Alto por GB",
-        desc: "Almacenamiento ultrarrápido pero no persistente."
-      },
-      {
-        tipo: "SSD NVMe",
-        uso: "Almacenamiento secundario de alto rendimiento",
-        ejemplos: "Samsung 980 Pro, WD Black SN850",
-        latencia: "Decenas de microsegundos",
-        rendimiento: "Muy alto (IOPS elevados)",
-        durabilidad: "Alta (millones de ciclos de escritura)",
-        escalabilidad: "Limitada por ranuras NVMe",
-        coste: "Medio-Alto",
-        desc: "Unidad de estado sólido con interfaz NVMe."
-      },
-      {
-        tipo: "HDD",
-        uso: "Almacenamiento secundario masivo",
-        ejemplos: "Seagate Barracuda, WD Blue",
-        latencia: "Milisegundos",
-        rendimiento: "Bajo",
-        durabilidad: "Alta (mecánica, sensible a golpes)",
-        escalabilidad: "Muy buena (grandes capacidades)",
-        coste: "Bajo por GB",
-        desc: "Disco duro mecánico, económico pero lento."
-      },
-      {
-        tipo: "NAS",
-        uso: "Almacenamiento compartido en red local",
-        ejemplos: "Synology, QNAP",
-        latencia: "Milisegundos (dependiente de red)",
-        rendimiento: "Medio",
-        durabilidad: "Alta (RAID disponible)",
-        escalabilidad: "Buena (expandible con discos)",
-        coste: "Medio",
-        desc: "Servidor de archivos accesible en red local."
-      },
-      {
-        tipo: "SAN",
-        uso: "Red de área de almacenamiento empresarial",
-        ejemplos: "Fibre Channel SAN, iSCSI SAN",
-        latencia: "Baja (microsegundos a ms)",
-        rendimiento: "Muy alto",
-        durabilidad: "Alta con redundancia",
-        escalabilidad: "Muy alta",
-        coste: "Muy alto",
-        desc: "Arquitectura de almacenamiento en red dedicada."
-      },
-      {
-        tipo: "Objeto en nube",
-        uso: "Almacenamiento de objetos en internet",
-        ejemplos: "Amazon S3, Azure Blob Storage",
-        latencia: "Decenas de ms",
-        rendimiento: "Variable",
-        durabilidad: "Muy alta (11 nueves en S3)",
-        escalabilidad: "Prácticamente infinita",
-        coste: "Pago por uso (barato para volumen)",
-        desc: "Almacenamiento flexible para archivos y datos no estructurados."
-      },
-      {
-        tipo: "Bloque en nube",
-        uso: "Discos virtuales en la nube para servidores",
-        ejemplos: "Amazon EBS, Google Persistent Disk",
-        latencia: "Milisegundos",
-        rendimiento: "Medio-Alto",
-        durabilidad: "Alta",
-        escalabilidad: "Alta",
-        coste: "Pago mensual por GB",
-        desc: "Almacenamiento por bloques para instancias en la nube."
-      },
-      {
-        tipo: "BD relacional",
-        uso: "Almacenamiento estructurado con SQL",
-        ejemplos: "MySQL, PostgreSQL, Oracle",
-        latencia: "Milisegundos",
-        rendimiento: "Medio-Alto",
-        durabilidad: "Alta (transacciones ACID)",
-        escalabilidad: "Vertical (escala en un solo nodo)",
-        coste: "Medio-Alto",
-        desc: "Bases de datos con relaciones entre tablas."
-      },
-      {
-        tipo: "NoSQL clave-valor",
-        uso: "Datos no estructurados, lectura/escritura rápidas",
-        ejemplos: "Redis, DynamoDB",
-        latencia: "Baja (ms o menos)",
-        rendimiento: "Muy alto",
-        durabilidad: "Variable (según configuración)",
-        escalabilidad: "Horizontal excelente",
-        coste: "Depende del proveedor",
-        desc: "Almacenamiento simple optimizado para rendimiento."
-      },
-      {
-        tipo: "Cinta/Archivado",
-        uso: "Almacenamiento de respaldo a largo plazo",
-        ejemplos: "LTO-9, IBM Tape",
-        latencia: "Segundos a minutos",
-        rendimiento: "Bajo",
-        durabilidad: "Muy alta (décadas en condiciones adecuadas)",
-        escalabilidad: "Alta (bibliotecas robotizadas)",
-        coste: "Muy bajo por TB",
-        desc: "Medio tradicional de archivado offline."
-      }
+      { tipo: "RAM", uso: "Memoria primaria, ejecución temporal de procesos", ejemplos: "DDR4, DDR5", latencia: "Nanosegundos", rendimiento: "Muy alto", durabilidad: "Volátil (se pierde al apagar)", escalabilidad: "Limitada al hardware del servidor", coste: "Alto por GB", desc: "Almacenamiento ultrarrápido pero no persistente." },
+      { tipo: "SSD NVMe", uso: "Almacenamiento secundario de alto rendimiento", ejemplos: "Samsung 980 Pro, WD Black SN850", latencia: "Decenas de microsegundos", rendimiento: "Muy alto (IOPS elevados)", durabilidad: "Alta (millones de ciclos de escritura)", escalabilidad: "Limitada por ranuras NVMe", coste: "Medio-Alto", desc: "Unidad de estado sólido con interfaz NVMe." },
+      { tipo: "HDD", uso: "Almacenamiento secundario masivo", ejemplos: "Seagate Barracuda, WD Blue", latencia: "Milisegundos", rendimiento: "Bajo", durabilidad: "Alta (mecánica, sensible a golpes)", escalabilidad: "Muy buena (grandes capacidades)", coste: "Bajo por GB", desc: "Disco duro mecánico, económico pero lento." },
+      { tipo: "NAS", uso: "Almacenamiento compartido en red local", ejemplos: "Synology, QNAP", latencia: "Milisegundos (dependiente de red)", rendimiento: "Medio", durabilidad: "Alta (RAID disponible)", escalabilidad: "Buena (expandible con discos)", coste: "Medio", desc: "Servidor de archivos accesible en red local." },
+      { tipo: "SAN", uso: "Red de área de almacenamiento empresarial", ejemplos: "Fibre Channel SAN, iSCSI SAN", latencia: "Baja (microsegundos a ms)", rendimiento: "Muy alto", durabilidad: "Alta con redundancia", escalabilidad: "Muy alta", coste: "Muy alto", desc: "Arquitectura de almacenamiento en red dedicada." },
+      { tipo: "Objeto en nube", uso: "Almacenamiento de objetos en internet", ejemplos: "Amazon S3, Azure Blob Storage", latencia: "Decenas de ms", rendimiento: "Variable", durabilidad: "Muy alta (11 nueves en S3)", escalabilidad: "Prácticamente infinita", coste: "Pago por uso (barato para volumen)", desc: "Almacenamiento flexible para archivos y datos no estructurados." },
+      { tipo: "Bloque en nube", uso: "Discos virtuales en la nube para servidores", ejemplos: "Amazon EBS, Google Persistent Disk", latencia: "Milisegundos", rendimiento: "Medio-Alto", durabilidad: "Alta", escalabilidad: "Alta", coste: "Pago mensual por GB", desc: "Almacenamiento por bloques para instancias en la nube." },
+      { tipo: "BD relacional", uso: "Almacenamiento estructurado con SQL", ejemplos: "MySQL, PostgreSQL, Oracle", latencia: "Milisegundos", rendimiento: "Medio-Alto", durabilidad: "Alta (transacciones ACID)", escalabilidad: "Vertical (escala en un solo nodo)", coste: "Medio-Alto", desc: "Bases de datos con relaciones entre tablas." },
+      { tipo: "NoSQL clave-valor", uso: "Datos no estructurados, lectura/escritura rápidas", ejemplos: "Redis, DynamoDB", latencia: "Baja (ms o menos)", rendimiento: "Muy alto", durabilidad: "Variable (según configuración)", escalabilidad: "Horizontal excelente", coste: "Depende del proveedor", desc: "Almacenamiento simple optimizado para rendimiento." },
+      { tipo: "Cinta/Archivado", uso: "Almacenamiento de respaldo a largo plazo", ejemplos: "LTO-9, IBM Tape", latencia: "Segundos a minutos", rendimiento: "Bajo", durabilidad: "Muy alta (décadas en condiciones adecuadas)", escalabilidad: "Alta (bibliotecas robotizadas)", coste: "Muy bajo por TB", desc: "Medio tradicional de archivado offline." }
     ];
 
     const glosario = [
@@ -197,35 +97,27 @@
     ];
 
     const preguntas = [
-      {
-        enunciado: "¿Cuál es el almacenamiento más rápido?",
-        opciones: ["RAM", "HDD", "Cinta"],
-        respuesta: "RAM"
-      },
-      {
-        enunciado: "¿Qué tecnología ofrece redundancia con varios discos?",
-        opciones: ["RAID", "NoSQL", "ACID"],
-        respuesta: "RAID"
-      },
-      {
-        enunciado: "¿Qué tipo de almacenamiento suele usarse para archivado a largo plazo?",
-        opciones: ["SSD NVMe", "Cinta", "RAM"],
-        respuesta: "Cinta"
-      }
+      { enunciado: "¿Cuál es el almacenamiento más rápido?", opciones: ["RAM", "HDD", "Cinta"], respuesta: "RAM" },
+      { enunciado: "¿Qué tecnología ofrece redundancia con varios discos?", opciones: ["RAID", "NoSQL", "ACID"], respuesta: "RAID" },
+      { enunciado: "¿Qué tipo de almacenamiento suele usarse para archivado a largo plazo?", opciones: ["SSD NVMe", "Cinta", "RAM"], respuesta: "Cinta" }
     ];
 
     // ======================
     // Render dinámico
     // ======================
-
-    // Render tarjetas
     const cardContainer = document.getElementById("cardContainer");
-    function renderCards() {
+    const tablaBody = document.getElementById("tablaBody");
+    const searchInput = document.getElementById("searchInput");
+    const glosarioList = document.getElementById("glosarioList");
+    const quizContainer = document.getElementById("quizContainer");
+
+    function renderCards(list) {
       cardContainer.innerHTML = "";
-      items.forEach(item => {
+      list.forEach(item => {
         const div = document.createElement("div");
         div.className = "card bg-white rounded-xl shadow p-4";
         div.dataset.type = item.tipo.toLowerCase();
+        div.dataset.uso = item.uso.toLowerCase();
         div.innerHTML = `
           <h3 class="font-bold text-lg mb-2">${item.tipo}</h3>
           <p class="text-sm mb-2">${item.desc}</p>
@@ -235,11 +127,9 @@
       });
     }
 
-    // Render tabla
-    const tablaBody = document.getElementById("tablaBody");
-    function renderTabla() {
+    function renderTabla(list) {
       tablaBody.innerHTML = "";
-      items.forEach(item => {
+      list.forEach(item => {
         const tr = document.createElement("tr");
         tr.innerHTML = `
           <td class="border p-2">${item.tipo}</td>
@@ -254,8 +144,6 @@
       });
     }
 
-    // Render glosario
-    const glosarioList = document.getElementById("glosarioList");
     function renderGlosario() {
       glosarioList.innerHTML = "";
       glosario.forEach(entry => {
@@ -265,8 +153,6 @@
       });
     }
 
-    // Render quiz
-    const quizContainer = document.getElementById("quizContainer");
     function renderQuiz() {
       quizContainer.innerHTML = "";
       preguntas.forEach((q, index) => {
@@ -288,16 +174,16 @@
       });
     }
 
-    // Filtro dinámico
-    const searchInput = document.getElementById("searchInput");
-    searchInput.addEventListener("input", () => {
+    function applyFilter() {
       const query = searchInput.value.toLowerCase();
-      document.querySelectorAll("#cardContainer .card").forEach(card => {
-        card.style.display = card.dataset.type.includes(query) ? "block" : "none";
-      });
-    });
+      const filtrados = items.filter(item => 
+        item.tipo.toLowerCase().includes(query) ||
+        item.uso.toLowerCase().includes(query)
+      );
+      renderCards(filtrados);
+      renderTabla(filtrados);
+    }
 
-    // Quiz verificación
     function checkAnswer(index, answer) {
       const result = document.getElementById(`quizResult-${index}`);
       if (answer === preguntas[index].respuesta) {
@@ -309,12 +195,14 @@
       }
     }
 
-    // Inicializar render
-    renderCards();
-    renderTabla();
-    renderGlosario();
-    renderQuiz();
+    // Inicialización
+    window.addEventListener("DOMContentLoaded", () => {
+      renderCards(items);
+      renderTabla(items);
+      renderGlosario();
+      renderQuiz();
+      searchInput.addEventListener("input", applyFilter);
+    });
   </script>
 </body>
 </html>
-
